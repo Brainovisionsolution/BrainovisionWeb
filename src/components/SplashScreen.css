@@ -1,0 +1,73 @@
+:root {
+  --wipe-delay: 2.0s;          /* delay before panel starts sliding out  */
+  --wipe-duration: 1.2s;       /* sliding animation length              */
+}
+
+/* ==== container ================================================================= */
+.splash {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;                        /* we’ll animate translate‑Y */
+  animation: panelSlide var(--wipe-duration) ease-in-out var(--wipe-delay) forwards;
+}
+
+/* ==== text wrapper ============================================================= */
+.splash__inner {
+  text-align: center;
+  letter-spacing: 0.14em;
+  animation: fadeInText 1.2s ease-out forwards;
+}
+
+/* ---------------------------------------------------- title “WELCOME TO” */
+.splash__title {
+  font: 600 clamp(1.1rem, 2.6vw, 1.6rem) "Inter", sans-serif;
+  color: #fff;
+  margin: 0 0 0.4em;
+  opacity: 0.65;
+}
+
+/* ---------------------------------------------------- brand “BRAIN O VISION”  */
+.splash__brand {
+  font: 700 clamp(2.4rem, 5vw + 1rem, 4.2rem) "Inter", sans-serif;
+  color: #fff;
+  margin: 0;
+  position: relative;
+}
+
+/* gold underline accent */
+.splash__brand::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.25em;
+  width: 0;
+  height: 3px;
+  background: #ffd700;
+  transform: translateX(-50%);
+  animation: underline 1s ease-out 0.8s forwards;
+}
+
+/* ==== keyframes ================================================================= */
+
+/* text fades & slides upward slightly */
+@keyframes fadeInText {
+  0%   { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0);    }
+}
+
+/* gold underline “grow” */
+@keyframes underline {
+  0%   { width: 0;      }
+  100% { width: 120%;   }
+}
+
+/* whole panel slides up off‑screen (wipe‑reveal effect) */
+@keyframes panelSlide {
+  0%   { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
+}

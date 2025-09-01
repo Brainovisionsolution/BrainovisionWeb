@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 10%;
+
+    --primary: 240 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 292 100% 63%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 10%;
+
+    --muted: 240 60% 98%;
+    --muted-foreground: 220 10% 40%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --input: 220 13% 91%;
+    --border: 220 13% 85%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 235 16% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 235 16% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 292 100% 63%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 10%;
+
+    --muted: 235 16% 18%;
+    --muted-foreground: 240 10% 65%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --input: 235 16% 25%;
+    --border: 235 16% 25%;
+    --ring: 262 100% 70%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* ================================
+    🔥 Custom Premium Animations
+================================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 12px #a78bfa; }
+  50% { box-shadow: 0 0 24px #c084fc; }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================================
+    🎨 Animation Utility Classes
+================================= */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-fade {
+  animation: fadeIn 1s ease-in-out both;
+}
+
+.animate-zoom {
+  animation: zoomIn 0.6s ease-out both;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.7s ease-out both;
+}
+
+.animate-glow {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background: linear-gradient(270deg, #6366f1, #8b5cf6, #ec4899, #facc15);
+  background-size: 800% 800%;
+  animation: gradientMove 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================
+    ✨ Hover Effects
+================================= */
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+/* ================================
+    🟨 Glassmorphism Utility
+================================= */
+.glass-card {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg;
+}
+
+.glass-dark {
+  @apply bg-black/20 backdrop-blur-md border border-white/10 text-white;
+}
+@layer utilities {
+  .halo-glow {
+    box-shadow:
+      0 0 20px rgba(255, 215, 0, 0.5),
+      0 0 40px rgba(255, 165, 0, 0.4),
+      0 0 60px rgba(255, 140, 0, 0.2);
+  }
+}
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-popup {
+  animation: popup 0.4s ease-out;
+}
+.perspective {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
