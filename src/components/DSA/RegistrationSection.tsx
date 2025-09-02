@@ -145,12 +145,12 @@ const RegistrationSection: React.FC = () => {
               ⚡ <span className="text-orange-500">Limited Time Offer</span>
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Early bird pricing available until January 10, 2026. Don't miss this opportunity to be part of history!
+              Early bird pricing available until October 10, 2026. Don't miss this opportunity to be part of history!
             </p>
             <div className="flex justify-center gap-8 text-sm text-gray-500 dark:text-gray-400">
-              <span>✅ Instant Confirmation</span>
-              <span>✅ Secure Payment</span>
-              <span>✅ Full Refund Policy</span>
+              <span>Instant Confirmation</span>
+              <span>Secure Payment</span>
+              <span> Full Refund Policy</span>
             </div>
           </div>
         </motion.div>
