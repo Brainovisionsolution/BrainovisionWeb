@@ -148,7 +148,7 @@ const HeroSection: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-orange-500" />
                 <span className="text-gray-700 dark:text-gray-300 font-medium">
-                  50,000+ Participants
+                  1,00,000+ Participants
                 </span>
               </div>
               <div className="flex items-center gap-2">
