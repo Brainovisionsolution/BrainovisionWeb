@@ -15,7 +15,7 @@ const Bootcamps = () => {
       title: "DSA Bootcamp",
       description: "Master Data Structures & Algorithms with real-world problems.",
       image: "/images/dsaa.jpg",
-      link: "/bootcamps/DSA",
+      link: "/dsa-deeptech",
     },
     {
       title: "AI & ML Bootcamp",
