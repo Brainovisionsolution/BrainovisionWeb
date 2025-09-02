@@ -83,7 +83,7 @@ const AppWrapper = () => {
         <Route path="/WorkingProfessionals" element={<WorkingProfessionals />} />
         <Route path="/courses/AgenticAi" element={<AgenticAi />} />
         <Route path="/workshopsAndHackathons/*" element={<Workshops />} />
-        <Route path="/DSA" element={<Dsabootcamp />} />
+        <Route path="/bootcamps/DSA" element={<Dsabootcamp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
