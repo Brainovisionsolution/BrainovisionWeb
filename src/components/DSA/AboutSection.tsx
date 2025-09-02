@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, Target, Users } from "lucide-react";
@@ -63,43 +64,7 @@ const AboutSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Why DSA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-neu-light dark:shadow-neu-dark"
-        >
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center text-gray-900 dark:text-yellow-300">
-            Why DSA for <span className="text-orange-500">DeepTech</span>?
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-orange-500">
-                Foundation Technologies
-              </h4>
-              <ul className="space-y-2 text-gray-700 dark:text-yellow-200">
-                <li>• Artificial Intelligence & Machine Learning</li>
-                <li>• Blockchain & Cryptocurrency</li>
-                <li>• Quantum Computing</li>
-                <li>• Cybersecurity & Cryptography</li>
-                <li>• Robotics & IoT</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-orange-500">
-                Core Benefits
-              </h4>
-              <ul className="space-y-2 text-gray-700 dark:text-yellow-200">
-                <li>• Advanced problem-solving capabilities</li>
-                <li>• Algorithmic thinking for complex systems</li>
-                <li>• Competitive advantage in job market</li>
-                <li>• Research & innovation foundation</li>
-                <li>• Industry-ready technical skills</li>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
 
       {/* Neumorphism Shadows */}
