@@ -64,18 +64,9 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-amber-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white">
       {/* Navigation */}
       <Navigation />
-
-      {/* Hero */}
       <HeroSection />
-
-      {/* About + Collabs */}
       <AboutSection />
       <Collabs />
-
-  
-
-
-      {/* Other Sections */}
       <TechnologiesSection />
       <ProgramBlocks />
       <WhyBrainovisionSection />
