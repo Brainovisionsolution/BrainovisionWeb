@@ -4,13 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { 
   Shield, 
-  Cpu, 
   Cloud, 
   Wifi, 
   Database, 
   Link,
-  Zap,
-  Globe
+  Zap
 } from "lucide-react";
 
 const TechnologiesSection: React.FC = () => {
@@ -22,7 +20,8 @@ const TechnologiesSection: React.FC = () => {
 
   const techCategories = [
     {
-      category: "AI & Machine Learning",
+      category: "Artificial Intelligence (AI)",
+      description: "We use AI to build smart solutions and also provide training, courses, and internships in AI and ML.",
       technologies: [
         { name: "TensorFlow", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
         { name: "PyTorch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
@@ -32,6 +31,7 @@ const TechnologiesSection: React.FC = () => {
     },
     {
       category: "Quantum Computing",
+      description: "We explore next-gen computing and offer exposure, internships, and research opportunities in quantum technologies.",
       technologies: [
         { name: "Qiskit", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "Cirq", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
@@ -41,6 +41,7 @@ const TechnologiesSection: React.FC = () => {
     },
     {
       category: "Blockchain & Web3",
+      description: "We build blockchain solutions and provide training in smart contracts, decentralized apps, and Web3.",
       technologies: [
         { name: "Ethereum", icon: Link, fallbackLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
         { name: "Solidity", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
@@ -49,7 +50,8 @@ const TechnologiesSection: React.FC = () => {
       ]
     },
     {
-      category: "Extended Reality",
+      category: "Extended Reality (AR/VR)",
+      description: "We create immersive AR/VR experiences and guide learners through hands-on projects and internships.",
       technologies: [
         { name: "Unity", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" },
         { name: "Unreal Engine", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" },
@@ -58,7 +60,8 @@ const TechnologiesSection: React.FC = () => {
       ]
     },
     {
-      category: "IoT & Edge",
+      category: "IoT & Edge Computing",
+      description: "We develop IoT solutions and provide internships to help students and professionals build connected systems.",
       technologies: [
         { name: "Arduino", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" },
         { name: "Raspberry Pi", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" },
@@ -68,6 +71,7 @@ const TechnologiesSection: React.FC = () => {
     },
     {
       category: "Robotics",
+      description: "We design intelligent robots and provide training courses and internships in robotics systems.",
       technologies: [
         { name: "ROS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" },
         { name: "OpenCV", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
@@ -77,6 +81,7 @@ const TechnologiesSection: React.FC = () => {
     },
     {
       category: "Data Science",
+      description: "We turn data into insights and offer courses, internships, and services in analytics and visualization.",
       technologies: [
         { name: "Jupyter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
         { name: "Apache Spark", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" },
@@ -86,6 +91,7 @@ const TechnologiesSection: React.FC = () => {
     },
     {
       category: "Cybersecurity",
+      description: "We protect businesses from threats and provide ethical hacking courses and internships.",
       technologies: [
         { name: "Wireshark", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
         { name: "Metasploit", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" },
@@ -101,13 +107,13 @@ const TechnologiesSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-20" data-aos="fade-up">
           <h2 className="text-sm font-semibold text-orange-600 dark:text-orange-400 uppercase tracking-wider mb-2 animate-pulse">
-            Deep Tech Innovation
+            Our Tech, Our Services, Your Future
           </h2>
           <h3 className="text-5xl font-extrabold font-serif mb-4 bg-gradient-to-r from-orange-600 via-yellow-500 to-orange-600 bg-clip-text text-transparent dark:from-orange-400 dark:via-yellow-400 dark:to-orange-400">
-            Cutting-Edge Technologies
+            We Use These Technologies & Share Knowledge
           </h3>
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            Pushing the boundaries of what's possible with advanced scientific and engineering breakthroughs.
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+            Our company not only leverages these advanced technologies for building solutions, but we also provide <strong>services, training courses, and internships</strong> so students, professionals, and organizations can grow with us.
           </p>
         </div>
 
@@ -120,9 +126,12 @@ const TechnologiesSection: React.FC = () => {
               data-aos-delay={index * 100}
               className="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-neu dark:shadow-neu-dark hover:shadow-neu-lg dark:hover:shadow-neu-lg-dark transition-all duration-500 hover:-translate-y-2"
             >
-              <h4 className="text-xl font-bold text-orange-600 dark:text-orange-400 mb-6 text-center transition-colors duration-300">
+              <h4 className="text-xl font-bold text-orange-600 dark:text-orange-400 mb-2 text-center transition-colors duration-300">
                 {category.category}
               </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-6">
+                {category.description}
+              </p>
               <div className="grid grid-cols-2 gap-4">
                 {category.technologies.map((tech, idx) => (
                   <div
@@ -150,18 +159,39 @@ const TechnologiesSection: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="mt-20 text-center" data-aos="fade-up">
-          <button
-            onClick={() => {
-              navigate("/SoftwareDevelopment");
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="px-12 py-5 bg-orange-500 dark:bg-orange-400 text-white font-bold text-lg rounded-full shadow-neu dark:shadow-neu-dark hover:shadow-neu-lg dark:hover:shadow-neu-lg-dark transition-all duration-500 transform hover:-translate-y-2"
-          >
-            Harness Deep Tech for Innovation
-          </button>
-        </div>
+    {/* CTA Buttons */}
+<div className="mt-20 text-center flex flex-col md:flex-row justify-center gap-6" data-aos="fade-up">
+ <button
+    onClick={() => {
+      navigate("/softwaredevelopment");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }}
+    className="px-8 py-4 bg-orange-500 dark:bg-orange-400 text-white font-bold text-lg rounded-full shadow-neu dark:shadow-neu-dark hover:shadow-neu-lg dark:hover:shadow-neu-lg-dark transition-all duration-500 transform hover:-translate-y-2"
+  >
+    Explore Services
+  </button>
+
+  <button
+    onClick={() => {
+      navigate("/Courses");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }}
+    className="px-8 py-4 bg-orange-500 dark:bg-orange-400 text-white font-bold text-lg rounded-full shadow-neu dark:shadow-neu-dark hover:shadow-neu-lg dark:hover:shadow-neu-lg-dark transition-all duration-500 transform hover:-translate-y-2"
+  >
+    Explore Courses
+  </button>
+
+ <button
+  onClick={() => {
+    window.open("https://internships.brainovision.in", "_blank");
+  }}
+  className="px-8 py-4 bg-orange-500 dark:bg-orange-400 text-white font-bold text-lg rounded-full shadow-neu dark:shadow-neu-dark hover:shadow-neu-lg dark:hover:shadow-neu-lg-dark transition-all duration-500 transform hover:-translate-y-2"
+>
+  Explore Internships
+</button>
+
+</div>
+
 
         {/* Additional Tech Showcase */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4" data-aos="fade-up" data-aos-delay="200">
