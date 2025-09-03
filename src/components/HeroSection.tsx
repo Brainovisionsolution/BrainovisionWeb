@@ -70,7 +70,7 @@ export const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-sm">
+          <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight drop-shadow-sm">
             {typedMain}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500 dark:from-yellow-400 dark:to-orange-400">
