@@ -48,29 +48,29 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center bg-white dark:bg-gray-900 text-black dark:text-white px-6 transition-colors duration-500 overflow-hidden">
+    <section className="relative min-h-[90vh] md:min-h-screen w-full flex items-center justify-center bg-white dark:bg-gray-900 text-black dark:text-white px-4 md:px-6 transition-colors duration-500 overflow-hidden">
       {/* Subtle glow background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute w-[800px] h-[800px] bg-orange-400/10 dark:bg-orange-600/20 blur-[200px] rounded-full -top-40 -left-40" />
-        <div className="absolute w-[700px] h-[700px] bg-yellow-400/10 dark:bg-yellow-500/20 blur-[180px] rounded-full bottom-0 right-0" />
+        <div className="absolute w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-orange-400/10 dark:bg-orange-600/20 blur-[160px] md:blur-[200px] rounded-full -top-20 md:-top-40 -left-20 md:-left-40" />
+        <div className="absolute w-[400px] md:w-[700px] h-[400px] md:h-[700px] bg-yellow-400/10 dark:bg-yellow-500/20 blur-[140px] md:blur-[180px] rounded-full bottom-0 right-0" />
       </div>
 
       {/* Grid content */}
-      <div className="z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl w-full">
+      <div className="z-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center max-w-7xl w-full py-12 md:py-0">
         {/* Text Section */}
         <motion.div
-          className="space-y-6"
+          className="space-y-6 text-center md:text-left"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <div>
-            <span className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow-md tracking-wide">
+            <span className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 md:px-4 py-1.5 rounded-full text-xs font-semibold shadow-md tracking-wide">
               🔥 Transforming Talent into Tech Titans
             </span>
           </div>
 
-          <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight drop-shadow-sm">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight drop-shadow-sm">
             {typedMain}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500 dark:from-yellow-400 dark:to-orange-400">
@@ -78,15 +78,21 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-xl leading-relaxed">
-            We are <span className="font-semibold text-yellow-600 dark:text-yellow-400">Brainovision</span>, shaping the next generation of{" "}
-            <span className="font-semibold text-gray-900 dark:text-gray-100">innovators, entrepreneurs, and leaders</span> through immersive learning,
-            deeptech projects, and impactful mentorship.
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed">
+            We are{" "}
+            <span className="font-semibold text-yellow-600 dark:text-yellow-400">
+              Brainovision
+            </span>
+            , shaping the next generation of{" "}
+            <span className="font-semibold text-gray-900 dark:text-gray-100">
+              innovators, entrepreneurs, and leaders
+            </span>{" "}
+            through immersive learning, deeptech projects, and impactful mentorship.
           </p>
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-wrap gap-3"
+            className="flex flex-wrap gap-3 justify-center md:justify-start"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -97,7 +103,9 @@ export const HeroSection = () => {
               { href: "https://internships.brainovision.in", label: "Internship", color: "text-gray-700 dark:text-gray-300" },
             ].map((btn, i) => (
               <a key={i} href={btn.href}>
-                <div className={`px-4 py-2 rounded-lg text-sm bg-white dark:bg-gray-800 shadow-neu hover:scale-105 hover:shadow-neu-inset transition-all duration-300 font-medium ${btn.color}`}>
+                <div
+                  className={`px-4 py-2 rounded-lg text-sm bg-white dark:bg-gray-800 shadow-neu hover:scale-105 hover:shadow-neu-inset transition-all duration-300 font-medium ${btn.color}`}
+                >
                   {btn.label}
                 </div>
               </a>
@@ -105,7 +113,7 @@ export const HeroSection = () => {
           </motion.div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-3 gap-3 pt-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-6">
             {[
               { number: "50K+", label: "Students" },
               { number: "200+", label: "Colleges" },
@@ -113,10 +121,14 @@ export const HeroSection = () => {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="text-center p-3 rounded-xl bg-white dark:bg-gray-800 shadow-neu"
+                className="text-center p-2 sm:p-3 rounded-xl bg-white dark:bg-gray-800 shadow-neu"
               >
-                <p className="text-xl md:text-2xl font-extrabold text-yellow-500 dark:text-yellow-400">{stat.number}</p>
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">{stat.label}</p>
+                <p className="text-lg sm:text-xl md:text-2xl font-extrabold text-yellow-500 dark:text-yellow-400">
+                  {stat.number}
+                </p>
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
@@ -124,7 +136,7 @@ export const HeroSection = () => {
 
         {/* Image Carousel */}
         <motion.div
-          className="w-full h-[26rem] rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-neu border border-orange-200 dark:border-orange-500 relative"
+          className="w-full h-[16rem] sm:h-[22rem] md:h-[26rem] rounded-2xl overflow-hidden bg-white dark:bg-gray-800 shadow-neu border border-orange-200 dark:border-orange-500 relative"
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9 }}
@@ -142,7 +154,11 @@ export const HeroSection = () => {
             {images.map((_, i) => (
               <div
                 key={i}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentIndex ? "bg-orange-500 dark:bg-orange-400 scale-125" : "bg-gray-300 dark:bg-gray-600"}`}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  i === currentIndex
+                    ? "bg-orange-500 dark:bg-orange-400 scale-125"
+                    : "bg-gray-300 dark:bg-gray-600"
+                }`}
               />
             ))}
           </div>
@@ -150,7 +166,10 @@ export const HeroSection = () => {
       </div>
 
       {/* Scroll Icon */}
-      <a href="#about" className="absolute bottom-6 right-6 animate-bounce z-20">
+      <a
+        href="#about"
+        className="absolute bottom-6 right-6 animate-bounce z-20"
+      >
         <div className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-neu border border-orange-300 dark:border-orange-500 hover:scale-110 transition">
           <ArrowDown className="text-orange-500 dark:text-orange-400 w-5 h-5" />
         </div>
@@ -160,13 +179,16 @@ export const HeroSection = () => {
       <style>
         {`
           .shadow-neu {
-            box-shadow: 6px 6px 12px rgba(0,0,0,0.12), -6px -6px 12px rgba(255,255,255,0.7);
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.12),
+                        -6px -6px 12px rgba(255,255,255,0.7);
           }
           .shadow-neu-inset {
-            box-shadow: inset 4px 4px 12px rgba(0,0,0,0.12), inset -4px -4px 12px rgba(255,255,255,0.8);
+            box-shadow: inset 4px 4px 12px rgba(0,0,0,0.12),
+                        inset -4px -4px 12px rgba(255,255,255,0.8);
           }
         `}
       </style>
     </section>
   );
 };
+
