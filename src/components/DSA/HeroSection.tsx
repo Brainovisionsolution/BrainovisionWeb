@@ -103,40 +103,50 @@ const HeroSection: React.FC = () => {
             </motion.div>
 
             {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <motion.a
-                href="https://rzp.io/rzp/Uo7FG6bB"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-gray-100 dark:bg-gray-800 text-orange-600 dark:text-orange-400 font-semibold py-4 px-8 rounded-2xl shadow-neumorphic hover:shadow-neumorphic-hover transition-all duration-300 text-center group"
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <BookOpen className="w-5 h-5" />
-                  Register as Student
-                  <span className="font-bold text-orange-500">₹99/-</span>
-                </span>
-              </motion.a>
+           {/* Action Buttons */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 1 }}
+  className="flex flex-col sm:flex-row gap-4"
+>
+  {/* Student Register Button */}
+  <motion.a
+    href="https://rzp.io/rzp/Uo7FG6bB"
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    className="bg-gray-100 dark:bg-gray-800 text-orange-600 dark:text-orange-400 font-semibold py-4 px-8 rounded-2xl shadow-neumorphic hover:shadow-neumorphic-hover transition-all duration-300 text-center group"
+  >
+    <span className="flex items-center justify-center gap-2">
+      <BookOpen className="w-5 h-5" />
+      Register as Student
+      <span className="flex items-center gap-2">
+        <span className="line-through text-gray-500">₹999/-</span>
+        <span className="font-bold text-orange-500">₹99/-</span>
+      </span>
+    </span>
+  </motion.a>
 
-              <motion.a
-                href="https://rzp.io/rzp/utwbMAmX"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-gray-100 dark:bg-gray-800 text-orange-600 dark:text-orange-400 font-semibold py-4 px-8 rounded-2xl shadow-neumorphic hover:shadow-neumorphic-hover transition-all duration-300 text-center border border-orange-200/50 dark:border-orange-700/50"
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <Award className="w-5 h-5" />
-                  Register as Host Dept
-                  <span className="font-bold text-orange-500">₹999/-</span>
-                </span>
-              </motion.a>
-            </motion.div>
+  {/* Host Dept Register Button */}
+  <motion.a
+    href="https://rzp.io/rzp/utwbMAmX"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    className="bg-gray-100 dark:bg-gray-800 text-orange-600 dark:text-orange-400 font-semibold py-4 px-8 rounded-2xl shadow-neumorphic hover:shadow-neumorphic-hover transition-all duration-300 text-center border border-orange-200/50 dark:border-orange-700/50"
+  >
+    <span className="flex items-center justify-center gap-2">
+      <Award className="w-5 h-5" />
+      Register as Host Dept
+      <span className="flex items-center gap-2">
+        <span className="line-through text-gray-500">₹9999/-</span>
+        <span className="font-bold text-orange-500">₹999/-</span>
+      </span>
+    </span>
+  </motion.a>
+</motion.div>
+
 
             {/* Stats */}
             <motion.div
