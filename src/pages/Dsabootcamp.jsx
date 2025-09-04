@@ -5,7 +5,7 @@ import HeroSection from '../components/DSA/HeroSection';
 import AboutSection from '../components/DSA/AboutSection';
 import ProgramHighlights from '../components/DSA/ProgramHighlights';
 import TargetVision from '../components/DSA/TargetVision';
-import RecordMilestone from '../components/DSA/RecordMilestone';
+//import RecordMilestone from '../components/DSA/RecordMilestone';
 import WhyDSA from '../components/DSA/WhyDSA';
 import CareerOpportunities from '../components/DSA/CareerOpportunities';
 import ParticipantBenefits from '../components/DSA/ParticipantBenefits';
@@ -30,7 +30,6 @@ function Dsabootcamp() {
         <AboutSection />
         <ProgramHighlights />
         <TargetVision />
-        <RecordMilestone />
         <WhyDSA />
         <CareerOpportunities />
         <ParticipantBenefits/>
