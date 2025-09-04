@@ -59,16 +59,27 @@ const RegistrationSection: React.FC = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-yellow-100/20 to-orange-200/20 rounded-3xl p-8 md:p-10 border border-orange-300/30 shadow-neu-light dark:shadow-neu-dark"
+            className="relative bg-gradient-to-br from-yellow-100/20 to-orange-200/20 rounded-3xl p-8 md:p-10 border border-orange-300/30 shadow-neu-light dark:shadow-neu-dark"
           >
+            {/* SALE Ribbon */}
+            <div className="absolute top-4 left-0 bg-orange-500 text-white text-xs font-bold px-4 py-1 rounded-r-full shadow-md">
+              🔥 Limited Offer
+            </div>
+
             <div className="text-center mb-8">
               <Users className="w-16 h-16 text-orange-500 mx-auto mb-6" />
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Student Registration
               </h3>
-              <div className="text-4xl md:text-5xl font-bold text-orange-500 mb-2">₹99/-</div>
+
+              {/* Price with discount */}
+              <div className="flex justify-center items-baseline gap-3 mb-2">
+                <span className="text-2xl md:text-3xl text-gray-500 line-through">₹999/-</span>
+                <span className="text-4xl md:text-5xl font-bold text-orange-500">₹99/-</span>
+              </div>
+
               <p className="text-gray-700 dark:text-gray-300">Early Bird Pricing</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">(Regular: ₹499/-)</p>
+              <p className="text-sm text-green-600 dark:text-green-400 font-semibold">(Save 90%)</p>
             </div>
 
             <div className="space-y-3 mb-8">
@@ -98,16 +109,27 @@ const RegistrationSection: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-yellow-100/20 to-orange-200/20 rounded-3xl p-8 md:p-10 border border-orange-300/30 shadow-neu-light dark:shadow-neu-dark"
+            className="relative bg-gradient-to-br from-yellow-100/20 to-orange-200/20 rounded-3xl p-8 md:p-10 border border-orange-300/30 shadow-neu-light dark:shadow-neu-dark"
           >
+            {/* SALE Ribbon */}
+            <div className="absolute top-4 left-0 bg-yellow-500 text-black text-xs font-bold px-4 py-1 rounded-r-full shadow-md">
+              ⭐ Best Value
+            </div>
+
             <div className="text-center mb-8">
               <Building2 className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Host Department Registration
               </h3>
-              <div className="text-4xl md:text-5xl font-bold text-yellow-500 mb-2">₹999/-</div>
+
+              {/* Price with discount */}
+              <div className="flex justify-center items-baseline gap-3 mb-2">
+                <span className="text-2xl md:text-3xl text-gray-500 line-through">₹9999/-</span>
+                <span className="text-4xl md:text-5xl font-bold text-yellow-500">₹999/-</span>
+              </div>
+
               <p className="text-gray-700 dark:text-gray-300">Institution Partnership</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">(Value: ₹10,000+)</p>
+              <p className="text-sm text-green-600 dark:text-green-400 font-semibold">(Save 90%)</p>
             </div>
 
             <div className="space-y-3 mb-8">
@@ -145,12 +167,12 @@ const RegistrationSection: React.FC = () => {
               ⚡ <span className="text-orange-500">Limited Time Offer</span>
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Early bird pricing available until October 10, 2026. Don't miss this opportunity to be part of history!
+              Early bird pricing available until October 10, 2025. Don't miss this opportunity to be part of history!
             </p>
             <div className="flex justify-center gap-8 text-sm text-gray-500 dark:text-gray-400">
-              <span>Instant Confirmation</span>
-              <span>Secure Payment</span>
-              <span> Full Refund Policy</span>
+              <span>✅ Instant Confirmation</span>
+              <span>✅ Secure Payment</span>
+              <span>✅ Full Refund Policy</span>
             </div>
           </div>
         </motion.div>
